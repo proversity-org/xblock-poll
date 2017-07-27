@@ -396,6 +396,7 @@ class PollBlock(PollBase):
         else:
             return None
 
+    @XBlock.supports("multi_device")
     def student_view(self, context=None):
         """
         The primary view of the PollBlock, shown to students
@@ -628,6 +629,7 @@ class SurveyBlock(PollBase):
     choices = Dict(help=_("The user's answers"), scope=Scope.user_state)
     event_namespace = 'xblock.survey'
 
+    @XBlock.supports("multi_device")
     def student_view(self, context=None):
         """
         The primary view of the SurveyBlock, shown to students
