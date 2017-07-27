@@ -506,6 +506,7 @@ class PollBlock(PollBase, CSVExportMixin):
         if self.choice and self.choice in dict(self.answers):
             return self.choice
 
+<<<<<<< HEAD
         return None
 
     def author_view(self, context=None):
@@ -516,6 +517,9 @@ class PollBlock(PollBase, CSVExportMixin):
         return self.student_view(context)
 
     @XBlock.supports("multi_device")  # Mark as mobile-friendly
+=======
+    @XBlock.supports("multi_device")
+>>>>>>> enable muti_device
     def student_view(self, context=None):
         """
         The primary view of the PollBlock, shown to students
@@ -794,6 +798,7 @@ class SurveyBlock(PollBase, CSVExportMixin):
     choices = Dict(help=_("The user's answers"), scope=Scope.user_state)
     event_namespace = 'xblock.survey'
 
+<<<<<<< HEAD
     def author_view(self, context=None):
         """
         Used to hide CSV export in Studio view
@@ -802,6 +807,9 @@ class SurveyBlock(PollBase, CSVExportMixin):
         return self.student_view(context)
 
     @XBlock.supports("multi_device")  # Mark as mobile-friendly
+=======
+    @XBlock.supports("multi_device")
+>>>>>>> enable muti_device
     def student_view(self, context=None):
         """
         The primary view of the SurveyBlock, shown to students
