@@ -44,7 +44,15 @@ def package_data(pkg, roots):
 
 setup(
     name='xblock-poll',
+<<<<<<< HEAD
     version='1.5.1',
+=======
+<<<<<<< HEAD
+    version='1.4.0',
+=======
+    version='1.2.8',
+>>>>>>> enable muti_device
+>>>>>>> enable muti_device
     description='An XBlock for polling users.',
     packages=[
         'poll',
