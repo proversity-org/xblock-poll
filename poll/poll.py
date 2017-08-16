@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # pylint: disable=too-many-lines
+=======
+# hi bronson
+>>>>>>> Updated layout of poll and survey to be responsive using CSS grid property
 # -*- coding: utf-8 -*-
 #
 # Copyright (C) 2015 McKinsey Academy
@@ -909,6 +913,7 @@ class SurveyBlock(PollBase, CSVExportMixin):
         tally = []
         questions = OrderedDict(self.markdown_items(self.questions))
         default_answers = OrderedDict([(answer, 0) for answer, __ in self.answers])
+        default_answers_labels = OrderedDict([(answer, answer_label) for answer, answer_label in self.answers])
         choices = self.choices or {}
         total = 0
         self.clean_tally()
@@ -922,6 +927,7 @@ class SurveyBlock(PollBase, CSVExportMixin):
         for key, value in questions.items():
             # Order matters here.
             answer_set = OrderedDict(default_answers)
+            answer_label_set = OrderedDict(default_answers_labels)
             answer_set.update(source_tally[key])
             tally.append({
                 'label': value['label'],
@@ -931,6 +937,7 @@ class SurveyBlock(PollBase, CSVExportMixin):
                     {
                         'count': count, 'choice': False,
                         'key': answer_key, 'top': False,
+                        'label': answer_label_set[answer_key]
                     }
                     for answer_key, count in answer_set.items()],
                 'key': key,
