@@ -6,34 +6,48 @@
 
     <h3 class="poll-header">{{ display_name }}</h3>
 
-    <form>
-      <fieldset class="poll-container">
-        <legend class="poll-question">
-          {{ question|safe }}
-        </legend>
-        <div class="poll-answers">
-          {% for key, value in answers %}
-            <div class="poll-answer">
-              <div class="poll-input-container">
-                <input type="radio" name="choice" id="poll-{{ block_id }}-answer-{{ key }}" value="{{ key }}"
-                    {% if choice == key %}checked{% endif %}/>
-              </div>
-              {% if any_img %}
-                <div class="poll-image">
-                  <label for="poll-{{ block_id }}-answer-{{ key }}" class="poll-image-label">
-                    {% if value.img %}
-                      <img src="{{ value.img }}"/>
-                    {% endif %}
-                  </label>
-                </div>
-              {% endif %}
-              <label class="poll-answer-text" for="poll-{{ block_id }}-answer-{{ key }}">{{ value.label|safe }}</label>
+    <div class="survey-grid">
+      <form>
+          <div class="survey-grid-row">
+            <div class="item">
+              {{ question|safe }}
             </div>
+          </div>
+
+          <div class="survey-grid-row" headers="poll-{{block_id}}-{{key}} poll-{{block_id}}-{{answer}}">
+            <div class="item">
+              <ul class="answers">
+                {% for key, value in answers %}
+                  <li>
+                    {{label}}
+                    <input type="radio" name="choice" id="poll-{{ block_id }}-answer-{{ key }}" value="{{ key }}"
+                      {% if choice == key %}checked{% endif %}/>
+
+                    {% if any_img %}
+                      <label for="poll-{{ block_id }}-answer-{{ key }}">
+                        {% if value.img %}
+                          <img src="{{ value.img }}"/>
+                        {% endif %}
+                      </label>
+                    {% endif %}
+                    <label for="poll-{{ block_id }}-answer-{{ key }}">{{ value.label|safe }}</label>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+<<<<<<< HEAD
           {% endfor %}
         </div>
       </fieldset>
       <input class="input-main" type="button" name="poll-submit" value="{% trans 'Submit' %}" disabled/>
     </form>
+=======
+          </div>
+
+        <input class="input-main" type="button" name="poll-submit" value="Submit" disabled/>
+      </form>
+    </div>
+>>>>>>> Updated layout of poll and survey to be responsive using CSS grid property
 
     <div class="poll-voting-thanks
         {% if not choice or can_vote %}poll-hidden{% endif %}">
