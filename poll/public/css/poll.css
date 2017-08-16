@@ -148,6 +148,7 @@ li.poll-result .poll-image {
     margin-bottom: 1em;
     font-size: smaller;
     font-weight: bold;
+    text-align: center;
 }
 
 .survey-table {
@@ -238,6 +239,153 @@ th.survey-answer {
     padding: 0;
 }
 
+/* Survey grid layout */
+
+form label {
+
+    display: inline;
+
+}
+
+.survey-grid {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 0;
+    margin: 15px 0;
+    padding: 0;
+    -ms-grid-columns: 5fr;
+    grid-template-columns: 5fr;
+    grid-auto-rows: minmax(auto, auto);
+}
+
+.survey-grid .survey-grid {
+
+    margin: 0;
+
+}
+
+.survey-grid .survey-grid .survey-grid-row:nth-child(odd) {
+
+    background: #ffffff;
+
+}
+
+.survey-grid .survey-grid-row {
+
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 0;
+    padding: 5px 15px;
+    -ms-grid-columns: 5fr;
+    grid-template-columns: 5fr;
+    grid-auto-rows: minmax(auto, auto);
+
+}
+
+.survey-grid .survey-grid-row:nth-child(odd) {
+
+    background: #f5f5f5;
+
+}
+
+.survey-grid .survey-grid-row:last-child {
+
+    border: none;
+
+}
+
+.survey-grid .survey-grid-row .item {
+    
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding: 5px 0;
+    text-align: center;
+
+}
+
+.survey-grid .survey-grid-row .item .answers {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.survey-grid .survey-grid-row .item .answers li {
+
+    display: inline-block;
+
+}
+
+.survey-grid .survey-grid-row .item label {
+
+    font: 1em sans-serif;
+
+}
+
+.survey-grid .survey-grid-row .item label p {
+
+    display: inline;
+
+}
+
+.survey-grid .survey-grid-row .item p {
+
+    text-align: center;
+    margin: 0;
+
+}
+
+.survey-grid .survey-grid-row .item input {
+
+    margin: 0 15px;
+    width: auto;
+
+}
+
+.survey-grid .survey-grid-row .item ul {
+
+    list-style-type: none !important;
+    margin: 0;
+    padding: 0;
+    padding-left: 0 !important;
+    width: 100%;
+
+}
+
+.survey-progress {
+    height: 25px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid #f5f5f5;
+}
+
+.survey-progress-bar {
+    float: left;
+    min-width: 2em;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 25px;
+    color: #fff;
+    text-align: center;
+    background-color: #337ab7;
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+}
+
+
 /* Keep the paragraph spacing, but make the spacing vertically even. */
 .poll-answer label.poll-answer-text p {
     margin-bottom: .5em;
@@ -275,4 +423,72 @@ th.survey-answer {
     vertical-align: middle;
     height: 100%;
     padding-right: .5em;
+}
+
+@media (max-width: 425px) {
+
+    .survey-grid .survey-grid-row .item .answers {
+
+        margin-left: 40%;
+        text-align: left;
+
+    }
+
+    .survey-grid .survey-grid-row .item .answers li {
+
+        display: block;
+
+    }
+
+}
+
+@media (max-width: 414px) {
+
+    .survey-grid .survey-grid-row .item .answers {
+
+        margin-left: 40%;
+        text-align: left;
+
+    }
+
+    .survey-grid .survey-grid-row .item .answers li {
+
+        display: block;
+
+    }
+
+}
+
+@media (max-width: 375px) {
+
+    .survey-grid .survey-grid-row .item .answers {
+
+        margin-left: 40%;
+        text-align: left;
+
+    }
+
+    .survey-grid .survey-grid-row .item .answers li {
+
+        display: block;
+
+    }
+
+}
+
+@media (max-width: 320px) {
+
+    .survey-grid .survey-grid-row .item .answers {
+
+        margin-left: 40%;
+        text-align: left;
+
+    }
+
+    .survey-grid .survey-grid-row .item .answers li {
+
+        display: block;
+
+    }
+
 }
