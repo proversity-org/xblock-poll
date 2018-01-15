@@ -1,4 +1,3 @@
-{% load i18n %}
 {{ js_template|safe }}
 <div class="poll-block themed-xblock" data-private="{% if private_results %}1{% endif %}"
      data-can-vote="{% if can_vote %}1{% endif %}">
@@ -35,35 +34,26 @@
                 {% endfor %}
               </ul>
             </div>
-<<<<<<< HEAD
-          {% endfor %}
-        </div>
-      </fieldset>
-      <input class="input-main" type="button" name="poll-submit" value="{% trans 'Submit' %}" disabled/>
-    </form>
-=======
           </div>
 
         <input class="input-main" type="button" name="poll-submit" value="Submit" disabled/>
       </form>
     </div>
->>>>>>> Updated layout of poll and survey to be responsive using CSS grid property
 
     <div class="poll-voting-thanks
         {% if not choice or can_vote %}poll-hidden{% endif %}">
-      <span>{% trans 'Thank you.' %}</span>
+      <span>Thank you.</span>
     </div>
 
     <div class="poll-submissions-count poll-hidden">
-      {% blocktrans with submissions_count_s='<span class="poll-current-count">{{ submissions_count }}</span>' max_submissions_s='<span class="poll-max-submissions">{{ max_submissions }}</span>' %}
-        You have used {{ submissions_count_s }} out of {{ max_submissions_s }} submissions.
-      {% endblocktrans %}
+      You have used <span class="poll-current-count">{{ submissions_count }}</span>
+      out of <span class="poll-max-submissions">{{ max_submissions }}</span> submissions.
     </div>
 
     {% if feedback %}
       <div class="poll-feedback-container{% if not choice %} poll-hidden{% endif %}">
         <hr/>
-        <h3 class="poll-header">{% trans 'Feedback' %}</h3>
+        <h3 class="poll-header">Feedback</h3>
 
         <div class="poll-feedback">
           {{ feedback|safe }}
@@ -71,22 +61,11 @@
       </div>
     {% endif %}
 
-
-  </div>
-      {% if can_view_private_results %}
+    {% if can_view_private_results %}
       <div class="view-results-button-wrapper">
-        <button class="view-results-button">{% trans 'View results' %}</button>
+        <button class="view-results-button">View results</button>
       </div>
     {% endif %}
+
+  </div>
 </div>
-{% if can_view_private_results %}
-  {% if not studio_edit %}
-    <div class="export-results-button-wrapper">
-      <button class="export-results-button">Export results to CSV</button>
-      <button disabled class="download-results-button">Download CSV</button>
-      <p class="error-message poll-hidden"></p>
-    </div>
-  {% else %}
-    <p>Student data and results CSV available for download in the LMS.</p>
-  {% endif %}
-{% endif %}

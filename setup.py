@@ -44,15 +44,7 @@ def package_data(pkg, roots):
 
 setup(
     name='xblock-poll',
-<<<<<<< HEAD
-<<<<<<< HEAD
     version='1.4.0',
-=======
-    version='1.2.8',
->>>>>>> enable muti_device
-=======
-    version='1.3.0',
->>>>>>> Updated layout of poll and survey to be responsive using CSS grid property
     description='An XBlock for polling users.',
     packages=[
         'poll',
