@@ -4,7 +4,6 @@
         <h4 class="poll-header">{{i18n "Results" }}</h4>
 
         <div class="survey-grid">
-
             {{#each tally}}
                 <div class="survey-grid-row">
                     <div class="item">
@@ -12,25 +11,8 @@
                             <img src="{{img}}" alt="img_alt"/>
                         {{/if}}
                         {{{label}}}
-<<<<<<< HEAD
-                    </th>
-                    {{#each answers}}
-                        <td class="survey-percentage survey-option{{#if choice}} survey-choice{{/if}}{{#if top}} poll-top-choice{{/if}}" aria-labelledby="answer-{{key}}-{{../../block_id}}">
-                            <span class="visible-mobile-only">
-                                {{#each ../../answers}}
-                                    {{#if_eq key ../key}}
-                                        {{label}}
-                                    {{/if_eq}}
-                                {{/each}}
-                            </span>
-                            <span class="percentage">{{percent}}%</span>
-                        </td>
-                    {{/each}}
-                </tr>
-=======
                     </div>
                 </div>
-
                 <div class="survey-grid-row">
                     <div class="item" aria-labelledby="answer-{{key}}-{{../../block_id}}">
                         <ul>
@@ -45,9 +27,7 @@
                         </ul>
                     </div>
                 </div>
->>>>>>> Updated layout of poll and survey to be responsive using CSS grid property
             {{/each}}
-
         </div>
 
         <input class="input-main" type="button" name="poll-submit" value="Submit" disabled>
