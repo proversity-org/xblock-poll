@@ -9,8 +9,8 @@
 
               {% for key, question in questions %}
 
-                  <div class="survey-grid-row">
-                    <div class="item">
+                  <div class="survey-grid-item">
+                    <div>
                       {% if question.img %}
                           <div class="poll-image-td">
                               <img src="{{question.img}}" alt="{{question.img_alt|default_if_none:''}}"/>
@@ -20,8 +20,8 @@
                     </div>
                   </div>
 
-                  <div class="survey-grid-row" headers="poll-{{block_id}}-{{key}} poll-{{block_id}}-{{answer}}">
-                    <div class="item">
+                  <div class="survey-grid-item" headers="poll-{{block_id}}-{{key}} poll-{{block_id}}-{{answer}}">
+                    <div>
                       <ul class="answers">
                         {% for answer, label in answers %}
                           <li>
