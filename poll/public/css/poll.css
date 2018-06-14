@@ -262,8 +262,9 @@ form label {
 
 .survey-grid {
 
-  display: grid;
-  display: -ms-grid;
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   margin: 15px 0;
   padding: 0;
 
@@ -285,17 +286,15 @@ form label {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  min-height: 32px;
   min-width: 100%;
-  margin: 15px;
-  padding: 15px;
+  padding: 10px 5px;
 
 }
 
 .survey-grid-item p {
 
   text-align: center;
-  margin: 0;
+  margin: 0 !important;
 
 }
 
