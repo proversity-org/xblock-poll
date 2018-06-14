@@ -267,6 +267,8 @@ form label {
   display: -ms-flexbox;
   margin: 15px 0;
   padding: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 
 }
 
