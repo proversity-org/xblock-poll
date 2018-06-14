@@ -7,15 +7,15 @@
 
     <div class="survey-grid">
       <form>
-          <div class="survey-grid-row">
-            <div class="item">
+          <div class="survey-grid-item">
+            <div>
               {{ question|safe }}
             </div>
           </div>
 
-          <div class="survey-grid-row" headers="poll-{{block_id}}-{{key}} poll-{{block_id}}-{{answer}}">
-            <div class="item">
-              <ul class="answers">
+          <div class="survey-grid-item" headers="poll-{{block_id}}-{{key}} poll-{{block_id}}-{{answer}}">
+            <div>
+              <ul class="survey-grid-item-answers">
                 {% for key, value in answers %}
                   <li>
                     {{label}}
