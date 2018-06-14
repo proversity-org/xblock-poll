@@ -1,377 +1,338 @@
 /* CSS for PollBlock Student View */
 
 .poll-question {
-    /* Make sure vertical whitespace below poll question is consistent across browsers.
-     * Some browsers use custom user agent stylesheets that modify the value of the "display" property
-     * for <legend> elements. */
-    display: inline;
+  /* Make sure vertical whitespace below poll question is consistent across browsers.
+   * Some browsers use custom user agent stylesheets that modify the value of the "display" property
+   * for <legend> elements. */
+  display: inline;
 }
 
 .poll-answer-text {
-    margin-bottom: 0;
-    font-weight: bold;
-    vertical-align: middle;
-    display: table-cell;
-    padding-left: .5em;
+  margin-bottom: 0;
+  font-weight: bold;
+  vertical-align: middle;
+  display: table-cell;
+  padding-left: .5em;
 }
 
 .percentage-gauge {
-    display: inline-block;
-    background-color: #e5ebee;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
+  display: inline-block;
+  background-color: #e5ebee;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
 }
 
 .poll-result-input-container {
-    display: inline-block;
-    vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .poll-result-input-container input {
-    margin: 0 .5em 0 0;
+  margin: 0 .5em 0 0;
 }
 
 .poll-input-container input[type="radio"] {
-    margin: 0;
+  margin: 0;
 }
 
 .percentage-gauge-background {
-    position: absolute;
-    display: inline-block;
-    background-color: #fafbfc;
+  position: absolute;
+  display: inline-block;
+  background-color: #fafbfc;
 }
 
 .percentage-gauge-container {
-    display: inline-block;
-    width: calc(100% - 75px);
-    vertical-align: middle;
-    position: relative;
-    background-color: #fafbfc;
+  display: inline-block;
+  width: calc(100% - 75px);
+  vertical-align: middle;
+  position: relative;
+  background-color: #fafbfc;
 }
 
 .poll-results.has-images .percentage-gauge-container {
-    width: 65%;
+  width: 65%;
 }
 
 .poll-answers, ul.poll-answers-results {
-    max-width: 80%;
+  max-width: 80%;
 }
 
 .poll-answers {
-    margin-bottom: 1em;
-    padding-left: 1em;
+  margin-bottom: 1em;
+  padding-left: 1em;
 }
 
 .poll-results-wrapper:focus {
-    outline: none;
+  outline: none;
 }
 
 ul.poll-answers-results {
-    list-style-type: none !important;
+  list-style-type: none !important;
 }
 
 .poll-answer {
-    display: table-row;
-    border-bottom-width: .5em;
-    vertical-align: middle;
-    margin-top: 5px;
+  display: table-row;
+  border-bottom-width: .5em;
+  vertical-align: middle;
+  margin-top: 5px;
 }
 
 li.poll-spacer {
-    height: .25em;
+  height: .25em;
 }
 
 div.poll-block ul.poll-results li.poll-result {
-    /* The selector above needs all three parts to trump some margin setting from the LMS. */
-    width: 100%;
-    margin-bottom: 4px;
+  /* The selector above needs all three parts to trump some margin setting from the LMS. */
+  width: 100%;
+  margin-bottom: 4px;
 }
 
 .poll-answer-label {
-    margin-left: .2em;
-    font-weight: bold;
-    display: inline-block;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    position: relative;
-    padding-left: .5em;
+  margin-left: .2em;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  position: relative;
+  padding-left: .5em;
 }
 
 .poll-image {
-    width: 25%;
-    display: table-cell;
-    vertical-align: middle;
-    margin-left: .5em;
+  width: 25%;
+  display: table-cell;
+  vertical-align: middle;
+  margin-left: .5em;
 }
 
 .poll-image.result-image {
-    background-color: #fafbfc;
+  background-color: #fafbfc;
 }
 
 li.poll-result .poll-image {
-    width: 22%;
-    display: inline-block;
-    margin-left: 0;
+  width: 22%;
+  display: inline-block;
+  margin-left: 0;
 }
 
 .poll-image-td {
-    width: 25%;
+  width: 25%;
 }
 
 .poll-image img {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 .poll-image img, .poll-image-td img{
-    width: 100%;
+  width: 100%;
 }
 
 .poll-image-td{
-    display: inline-block;
+  display: inline-block;
 }
 
 .poll-percent-container {
-    display: inline-block;
-    text-align: left;
-    padding-left: .2em;
-    vertical-align: middle;
+  display: inline-block;
+  text-align: left;
+  padding-left: .2em;
+  vertical-align: middle;
 }
 
 .poll-percent-display {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .poll-top-choice {
-    color: #e37222;
+  color: #e37222;
 }
 
 .poll-footnote {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    font-size: smaller;
-    font-weight: bold;
-    text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: smaller;
+  font-weight: bold;
+  text-align: center;
 }
 
 .survey-table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 0;
+  width: 100%;
+  border-collapse: collapse;
+  border: 0;
 }
 
 .survey-table td{
-    text-align: center;
+  text-align: center;
 }
 
 .survey-table td label{
-    display: block;
-    padding: 5px 0;
+  display: block;
+  padding: 5px 0;
 }
 
 .survey-table td, .survey-table th {
-    border: 1px solid #CCC;
-    border-top: 0;
+  border: 1px solid #CCC;
+  border-top: 0;
 }
 
 .survey-table tbody tr:last-child td,
 .survey-table tbody tr:last-child th {
-    border-bottom: 0;
+  border-bottom: 0;
 }
 
 .survey-table tr td:first-child,
 .survey-table tr th:first-child {
-    border-left: 0;
+  border-left: 0;
 }
 
 .survey-table tr td:last-child,
 .survey-table tr th:last-child {
-    border-right: 0;
+  border-right: 0;
 }
 
 .survey-table thead {
-    border-top: 0;
-    background: none;
+  border-top: 0;
+  background: none;
 }
 
 .survey-table thead tr td,
 .survey-table thead tr th {
-    font-weight: bold;
-    font-size: .9rem;
+  font-weight: bold;
+  font-size: .9rem;
 }
 
 .survey-table .survey-row {
-    background: none !important;
+  background: none !important;
 }
 
 .survey-table .survey-row .survey-question {
-    text-align: left;
+  text-align: left;
 }
 
 .survey-table .survey-option label {
-    text-align: center;
-    vertical-align: middle;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .survey-option input {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 th.survey-answer {
-    text-align: center;
-    width: 7%;
-    line-height: 1em;
-    padding-bottom: .25em;
+  text-align: center;
+  width: 7%;
+  line-height: 1em;
+  padding-bottom: .25em;
 }
 
 .poll-header {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .survey-percentage {
-    font-weight: bolder;
-    font-size: 1.2rem;
+  font-weight: bolder;
+  font-size: 1.2rem;
 }
 
 .survey-question {
-    font-weight: bold;
-    vertical-align: middle;
-    padding-top: .15em;
-    padding-bottom: .15em;
+  font-weight: bold;
+  vertical-align: middle;
+  padding-top: .15em;
+  padding-bottom: .15em;
 }
 
 .survey-choice {
-    background-color: #e5ebee;
+  background-color: #e5ebee;
 }
 
 /* Counteract Markdown's wrapping in paragraphs */
 .survey-question p, div.percentage-gauge-container label.poll-answer-label p{
-    margin-bottom: 0;
-    padding: 0;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 /* Survey grid layout */
 
 form label {
 
-    display: inline;
+  display: inline;
 
 }
 
 .survey-grid {
-    display: -ms-grid;
-    display: grid;
-    grid-gap: 0;
-    margin: 15px 0;
-    padding: 0;
-    -ms-grid-columns: 5fr;
-    grid-template-columns: 5fr;
-    grid-auto-rows: minmax(auto, auto);
-}
 
-.survey-grid .survey-grid {
-
-    margin: 0;
+  display: grid;
+  display: -ms-grid;
+  margin: 15px 0;
+  padding: 0;
 
 }
 
-.survey-grid .survey-grid .survey-grid-row:nth-child(odd) {
+.survey-grid-item {
 
-    background: #ffffff;
-
-}
-
-.survey-grid .survey-grid-row {
-
-    display: -ms-grid;
-    display: grid;
-    grid-gap: 0;
-    padding: 5px 15px;
-    -ms-grid-columns: 5fr;
-    grid-template-columns: 5fr;
-    grid-auto-rows: minmax(auto, auto);
-
-}
-
-.survey-grid .survey-grid-row:nth-child(odd) {
-
-    background: #f5f5f5;
-
-}
-
-.survey-grid .survey-grid-row:last-child {
-
-    border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 32px;
+  min-width: 100%;
+  margin: 15px;
+  padding: 15px;
 
 }
 
-.survey-grid .survey-grid-row .item {
-    
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    padding: 5px 0;
-    text-align: center;
+.survey-grid-item p {
+
+  text-align: center;
+  margin: 0;
 
 }
 
-.survey-grid .survey-grid-row .item .answers {
+.survey-grid-item input {
 
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-}
-
-.survey-grid .survey-grid-row .item .answers li {
-
-    display: inline-block;
+  margin: 0 15px;
+  width: auto;
 
 }
 
-.survey-grid .survey-grid-row .item label {
+.survey-grid-item:nth-child(odd) {
 
-    font: 1em sans-serif;
-
-}
-
-.survey-grid .survey-grid-row .item label p {
-
-    display: inline;
+  background: #f5f5f5;
 
 }
 
-.survey-grid .survey-grid-row .item p {
+.survey-grid-item-answers {
 
-    text-align: center;
-    margin: 0;
-
-}
-
-.survey-grid .survey-grid-row .item input {
-
-    margin: 0 15px;
-    width: auto;
+  list-style-type: none;
 
 }
 
-.survey-grid .survey-grid-row .item ul {
+.survey-grid-item-answers li {
 
-    list-style-type: none !important;
-    margin: 0;
-    padding: 0;
-    padding-left: 0 !important;
-    width: 100%;
+  display: inline-block;
+
+}
+
+.survey-grid-item-answers li label {
+
+  font: 1em sans-serif;
+
+}
+
+.survey-grid-item-answers li label p {
+
+  display: inline;
 
 }
 
