@@ -562,6 +562,9 @@ class PollBlock(PollBase, CSVExportMixin):
         return {
             'question': self.question,
             'answers': self.answers,
+            'max_submissions': self.max_submissions,
+            'private_results': self.private_results,
+            'feedback': self.feedback,
         }
 
     @XBlock.handler
@@ -767,9 +770,11 @@ class SurveyBlock(PollBase, CSVExportMixin):
     # but either way we want it to say 'Poll' by default on the page.
     block_name = String(default=_('Poll'))
     answers = List(
-        default=(
-            ('Y', _('Yes')), ('N', _('No')),
-            ('M', _('Maybe'))),
+        default=[
+            ('Y', _('Yes')),
+            ('N', _('No')),
+            ('M', _('Maybe'))
+        ],
         scope=Scope.settings, help=_("Answer choices for this Survey")
     )
     questions = List(
@@ -846,6 +851,10 @@ class SurveyBlock(PollBase, CSVExportMixin):
         return {
             'questions': self.questions,
             'answers': self.answers,
+            'max_submissions': self.max_submissions,
+            'private_results': self.private_results,
+            'block_name': self.block_name,
+            'feedback': self.feedback,
         }
 
     @XBlock.handler
